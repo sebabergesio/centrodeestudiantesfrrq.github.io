@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios · Centro de Estudiantes FRRQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        :root {
+            --azul-oscuro: #0A1628;
+            --azul: #1a3a6b;
+            --azul-claro: #2B5B8C;
+            --naranja: #F57C00;
+            --naranja-claro: #FFA726;
+            --gris: #F5F7FA;
+            --blanco: #FFFFFF;
+            --texto: #1F2937;
+            --texto-claro: #6B7280;
+            --sombra: 0 2px 20px rgba(0,0,0,0.06);
+            --radio: 12px;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+            padding: 60px 0 40px;
+            color: white;
+            text-align: center;
+        }
+        .page-header h1 { font-size: 2.5rem; font-weight: 800; }
+        .page-header h1 i { color: var(--naranja-claro); }
+        .page-header p { font-size: 1rem; opacity: 0.8; max-width: 600px; margin: 8px auto 0; }
+        .page-content { padding: 40px 0; background: var(--gris); }
+
+        .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .servicio-card {
+            background: var(--blanco);
+            border-radius: var(--radio);
+            padding: 24px 20px;
+            box-shadow: var(--sombra);
+            text-align: center;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .servicio-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--naranja);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+        .servicio-card .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            background: var(--gris);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 1.6rem;
+            color: var(--azul);
+            transition: 0.3s;
+        }
+        .servicio-card:hover .icon-wrapper {
+            background: var(--naranja);
+            color: white;
+        }
+        .servicio-card h3 {
+            font-size: 0.95rem;
+            color: var(--azul-oscuro);
+            margin-bottom: 4px;
+        }
+        .servicio-card p {
+            color: var(--texto-claro);
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 820px) { .servicios-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .servicios-grid { grid-template-columns: 1fr; } .page-header h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="logo-text">
+                    <span class="logo-utn">UTN FRRQ</span>
+                    <span class="logo-sub">Centro de Estudiantes</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="campus.html">Campus</a></li>
+                    <li><a href="academico.html">Académico</a></li>
+                    <li><a href="servicios.html" class="active">Servicios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-concierge-bell"></i> Servicios</h1>
+            <p>Todo lo que necesitas para tu vida universitaria, en un solo lugar</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-print"></i></div>
+                    <h3>Centro de Copiado</h3>
+                    <p>Servicio de impresión y fotocopiado en el bar universitario.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-wifi"></i></div>
+                    <h3>WiFi Gratuito</h3>
+                    <p>Nombre: UTN Wifi, Contraseña: singular</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
+                    <h3>Bar Universitario</h3>
+                    <p>Comidas, Bebidas, Juegos y mas para estudiantes.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-book"></i></div>
+                    <h3>Biblioteca</h3>
+                    <p>Amplio catálogo online y fisico brindado por la facultad, junto a un espacio de estudio.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Salud y Bienestar</h3>
+                    <p>Contamos con Psicóloga a disposición para nuestros estudiantes.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-bus"></i></div>
+                    <h3>Transporte</h3>
+                    <p>Contamos con boleto educativo.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-laptop"></i></div>
+                    <h3>Proximamente</h3>
+                    <p>.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Ayuda Estudiantil</h3>
+                    <p>Para Casos Especiales/Aislados.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="icon-wrapper"><i class="fas fa-tools"></i></div>
+                    <h3>Talleres y Laboratorios</h3>
+                    <p>Espacios equipados para prácticas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="footer-logo"><i class="fas fa-graduation-cap"></i><span>UTN FRRQ</span></div>
+                <p class="footer-desc">Universidad Tecnológica Nacional · Facultad Regional Reconquista · Formando profesionales desde 1959.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Útiles</h4>
+                <ul>
+                    <li><a href="https://frrq.cvg.utn.edu.ar/" target="_blank">Moodle</a></li>
+                    <li><a href="https://www3.frrq.utn.edu.ar/sysacadweb/loginalumno.asp" target="_blank">SYSACAD</a></li>
+                    <li><a href="https://www.frrq.utn.edu.ar/biblioteca-ing-alcides-martinez/" target="_blank">Biblioteca</a></li>
+                    <li><a href="https://www.frrq.utn.edu.ar" target="_blank">UTN FRRQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> comunicacion@frrq.utn.edu.ar</li>
+                    <li><i class="fas fa-phone"></i> +54 3482 433663</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle 44 Nº 1000</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación</h4>
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6969.241812949353!2d-59.66433200000001!3d-29.146370000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944eb070e4b85b65%3A0x2aae9b3904deeb0f!2sUTN%20-%20Facultad%20Regional%20Reconquista!5e0!3m2!1ses!2sus!4v1785991252262!5m2!1ses!2sus" 
+                            width="100%" height="140" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>&copy; 2024 UTN FRRQ · Todos los derechos reservados</p></div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
